@@ -6,6 +6,10 @@
 # V0.2 17th May 2017 Platform independent: utime and machine replace pyb
 
 '''
+Original library and documentation can be found here:
+https://github.com/micropython-IMU/micropython-mpu9x50 
+https://github.com/micropython-IMU/micropython-mpu9x50/blob/master/README_MPU9150.md
+
 mpu9250 is a micropython module for the InvenSense MPU9250 sensor.
 It measures acceleration, turn rate and the magnetic field in three axis.
 mpu9150 driver modified for the MPU9250 by Peter Hinch
