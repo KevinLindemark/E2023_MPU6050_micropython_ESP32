@@ -72,7 +72,7 @@ class MPU6050(object):
 
     _I2Cerror = "I2C failure when communicating with IMU"
     _mpu_addr = (104, 105)  # addresses of MPU9150/MPU6050. There can be two devices
-    _chip_id = 114
+    _chip_id = 104
 
     def __init__(self, side_str, device_addr=None, transposition=(0, 1, 2), scaling=(1, 1, 1)):
 
@@ -183,7 +183,7 @@ class MPU6050(object):
             self._read(self.buf2, 0x41, self.mpu_addr)
         except OSError:
             raise MPUException(self._I2Cerror)
-        return bytes_toint(self.buf2[0], self.buf2[1])/340 + 16  # I think
+        return bytes_toint(self.buf2[0], self.buf2[1])/340+35  # I think
 
     # passthrough
     @property
