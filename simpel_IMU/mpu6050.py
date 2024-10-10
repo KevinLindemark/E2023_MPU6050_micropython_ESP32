@@ -29,7 +29,7 @@ class MPU6050():
         vals["acceleration y"] = self.bytes_toint(raw_ints[2], raw_ints[3])
         vals["acceleration z"] = self.bytes_toint(raw_ints[4], raw_ints[5])
         # / 340.00 + 16 converts temperature to celsius degrees
-        vals["temperature celsius"] = self.bytes_toint(raw_ints[6], raw_ints[7]) / 340.00 + 16
+        vals["temperature celsius"] = self.bytes_toint(raw_ints[6], raw_ints[7]) / 340 + 35
         vals["gyroscope x"] = self.bytes_toint(raw_ints[8], raw_ints[9])
         vals["gyroscope y"] = self.bytes_toint(raw_ints[10], raw_ints[11])
         vals["gyroscope z"] = self.bytes_toint(raw_ints[12], raw_ints[13])
